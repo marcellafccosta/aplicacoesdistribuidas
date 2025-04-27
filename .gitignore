@@ -1,0 +1,43 @@
+# Compilação
+*.o
+*.obj
+*.exe
+*.out
+*.a
+*.so
+*.dll
+*.dylib
+
+# Diretórios de build
+/build/
+/bin/
+/lib/
+/dist/
+/Debug/
+/Release/
+
+# Arquivos de log
+*.log
+
+# Arquivos de IDEs
+*.vscode/
+*.idea/
+*.suo
+*.user
+*.userosscache
+*.sln
+*.swp
+*.ncb
+*.vcxproj
+*.vcxproj.filters
+
+# Arquivos temporários
+*.tmp
+*.temp
+*.bak
+*.swp
+*.DS_Store
+*.~*
+
+# Arquivos gerados pelo sistema
+Thumbs.db
