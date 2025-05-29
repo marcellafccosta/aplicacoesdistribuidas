@@ -32,7 +32,6 @@ int main(){
 	}
 
 	sum = 0.0;
-	omp_set_num_threads(8); 
 
 	start_time = omp_get_wtime();
 	/*2 - O QUE ESTÁ ACONCENDO AQUI?*/

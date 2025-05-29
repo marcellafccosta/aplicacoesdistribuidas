@@ -5,7 +5,7 @@
 
 int main()
 {
-    const int N = 50;
+    const int N = 5000;
     const int CHUNKSIZE = 5;
 
     int i, chunk, tid;
@@ -20,8 +20,6 @@ int main()
     }
 
     chunk = CHUNKSIZE;
-
-    omp_set_num_threads(8);
     start_time = omp_get_wtime();
 
 #pragma omp parallel for shared(a, b, c, chunk) private(i, tid) schedule(static, chunk)
@@ -30,11 +28,10 @@ int main()
         tid = omp_get_thread_num();
         c[i] = a[i] + b[i];
         printf("tid= %d i= %d c[i]= %f\n", tid, i, c[i]);
-    }
-    /* end of parallel for construct */
+    } /* end of parallel for construct */
 
     end_time = omp_get_wtime();
-    printf("Time: %f seconds\n", end_time - start_time);
+    printf("Time taken: %f seconds\n", end_time - start_time);
 
     return 0;
 }

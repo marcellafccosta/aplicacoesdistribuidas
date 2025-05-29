@@ -6,12 +6,11 @@
 
 int main() 
 {
-	int n= 50;
+	int n= 5000;
 	int i, nthreads, tid;
 	float a[n], b[n], c[n], d[n];
 
     double start_time, end_time;
-    omp_set_num_threads(4);
     
 	/* Some initializations */
 	for(i=0; i<n; i++){
@@ -63,5 +62,5 @@ int main()
 	  }  
 
     end_time = omp_get_wtime();
-    printf("Tempo total: %f segundos\n", end_time - start_time);
+    printf("Time taken: %f seconds\n", end_time - start_time);
 }
